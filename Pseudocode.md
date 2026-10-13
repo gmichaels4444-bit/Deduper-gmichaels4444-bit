@@ -68,14 +68,14 @@ posdict=[] #format:key is "chromosome-start position-umi-strand", value is
 
 with open f'{args.inpath}{args.infile}' for reading as fh ###gzip.open if zipped
 with open f'{args.outpath}{args.outfile}' for writing as outfile
-	first_line=True #for avoiding leading or trailing newline character in output file, unnecessary if header not in output
+	first_line=True #flag used for avoiding leading or trailing newline character in output file, unnecessary if header not in output
 	for line in input file: #each entry is one line
 		strip newline character
 		if line at position 0 is not "@": #ie is not header line
 			splitline= line split by tabs #####for setting variables###
 			flag= splitline position 1 #bitwise flag
 			if ((flag & 4) == 4): #checks if bitwise flag is set to "unmapped" for removing unmapped reads
-				skip this line, is unmapped and cannot be checked for duplication
+				skip this line in the file, is unmapped and cannot be checked for duplication
 			qname= split splitline position 0 by ":" #allows for indexing of qname column
 			UMI= qname position 7
 			if UMI in umidict: #else condition has misread; will be thrown out
@@ -101,10 +101,10 @@ with open f'{args.outpath}{args.outfile}' for writing as outfile
 					duplicate, do not write out
 				else: #is unique entry, write out
 					write line to output file
-		else (if line begins with "@"): #header is written out here, this section can be deleted if header not desired in output
-			if first_line=False:
-				write line to output file
+		else (ie if line begins with "@"): #header is written out with this configuration, can delete lines with "?" if header not desired in output
+			if first_line=False:?
+				write line to output file?
 			else: #only true for first header line
-				write line to output file with no newline character
+				write line to output file with no newline character?
 				set first_line=False 
 
