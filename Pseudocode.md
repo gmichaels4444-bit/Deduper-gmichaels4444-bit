@@ -61,8 +61,11 @@ Flags to be set: first_line (for printing formatting),
 Variables to be set: flag for bitwise flag, strand for fwd or reverse complemented reads, UMI (from end of qname), chromosome, start position (accounting for soft clipping), cigar string
 
 note: all write lines begin with newline character except for first line
+
 #for storing individual positions within sam for duplicate comparisons
-posdict=[] #format:key is "chromosome-start position-umi-strand", value is 
+posdict=[] #format:key is "chromosome-start position-umi-strand", value is N/A
+#may change to set
+
 #contains requirements for determining if single-end reads are pcr duplicates
 #all requirements for duplicates must be in key; can move strand parameter to values if doing 2
 
