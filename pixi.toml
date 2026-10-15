@@ -1,0 +1,10 @@
+[workspace]
+authors = ["gmich <gmich@uoregon.edu>"]
+channels = ["conda-forge", "bioconda"]
+name = "Deduper-gmichaels4444-bit"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]

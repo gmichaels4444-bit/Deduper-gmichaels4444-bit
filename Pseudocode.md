@@ -49,8 +49,8 @@ def tail_sc(cig: str)-> int:
 # 	print("tail_sc works")
 
 
-#empty dictionary for storing UMIS
-umidict=[]
+#empty set for storing UMIS
+umiset={}
 with open args.umi for reading as umi
 	for line in umi:
 		add umi as key, set value to 0
@@ -78,7 +78,7 @@ with open f'{args.outpath}{args.outfile}' for writing as outfile
 				skip this line in the file, is unmapped and cannot be checked for duplication
 			qname= split splitline position 0 by ":" #allows for indexing of qname column
 			UMI= qname position 7
-			if UMI in umidict: #else condition has misread; will be thrown out
+			if UMI in umiset: #else condition has misread; will be thrown out
 				###variable setup###
 				if ((flag & 16) == 16):
 					strand=rev

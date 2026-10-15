@@ -1,9 +1,9 @@
 ##Conditions to account for in testing
 
-Same chromosome, start base, UMI, opposite strand (write both)
-^ repeat for each part of dict
+For each of 4 uniqueness dict elements: keep all but 1 the same (write all entries)
+Same chromosome, start base, UMI, strandedness 
 
-Same mapped everything, but one read has 2 bp of 5` soft clipping (different real starts, write both)
+Same everything, but one read has 2 bp of 5` soft clipping (different real starts, write both)
 
 Same everything (same real starts, only write 1)
 
