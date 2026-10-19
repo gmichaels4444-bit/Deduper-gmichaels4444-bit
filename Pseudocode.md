@@ -48,7 +48,7 @@ def tail_sc(cig: str)-> int:
 #	assert reverse_comp("6S12M") == "0" 
 # 	print("tail_sc works")
 
-
+```
 #empty set for storing UMIS
 umiset={}
 with open args.umi for reading as umi
@@ -68,7 +68,9 @@ posdict=[] #format:key is "chromosome-start position-umi-strand", value is N/A
 
 #contains requirements for determining if single-end reads are pcr duplicates
 #all requirements for duplicates must be in key; can move strand parameter to values if doing 2
+```
 
+```
 with open f'{args.inpath}{args.infile}' for reading as fh ###gzip.open if zipped
 with open f'{args.outpath}{args.outfile}' for writing as outfile
 	first_line=True #flag used for avoiding leading or trailing newline character in output file, unnecessary if header not in output
@@ -110,4 +112,4 @@ with open f'{args.outpath}{args.outfile}' for writing as outfile
 			else: #only true for first header line
 				write line to output file with no newline character?
 				set first_line=False 
-
+```
